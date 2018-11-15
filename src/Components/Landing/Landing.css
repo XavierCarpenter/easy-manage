@@ -1,0 +1,46 @@
+.landing-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav{
+    height:6vh;
+}
+.landing-box{
+    background: url('../../images/splash.jpg');
+   background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title{
+    margin: 0 30% 10% 30%;
+
+
+}
+.title h1{
+font-size: 2em;
+}
+.title p {
+    font-size: 22px;
+
+}
+.login-container{
+    display: flex;
+
+}
+.login-box{
+    margin: 0 5%;
+    text-align: left;
+    line-height: 22px;
+}
+.login-box h1{
+    font-size: 1.5em;
+}
+.login-box p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
