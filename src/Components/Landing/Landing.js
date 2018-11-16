@@ -6,7 +6,14 @@ class Landing extends Component {
     render() {
         return (
             <div className="landing-container">
-                <nav>home</nav>
+                <nav className="landing-nav">
+                <div className="logo"></div>
+                    <ul className="nav-items">
+                        <li>Home</li>
+                        <li>How it Works</li>
+                        
+                    </ul>
+                    </nav>
                 <div className="landing-box">
                     <div className="title">
                         <h1>Easy Manage</h1>
