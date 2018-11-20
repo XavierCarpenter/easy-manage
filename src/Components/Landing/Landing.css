@@ -4,7 +4,7 @@
     align-items: center;
 }
 nav{
-    height:6vh;
+    height:6.2vh;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,7 @@ padding: 0 10px;
    background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 94vh;
+    height: 93.8vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

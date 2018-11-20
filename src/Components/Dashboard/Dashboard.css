@@ -1,3 +1,46 @@
 .main-nav{
     background: green;
 }
+ .Dashboard-content{
+    background: blue;
+    display: flex;
+} 
+.left-side{
+background: grey;
+display: flex;
+flex-direction: column;
+margin: 1% 1% 0 1%;
+width: 29%;
+}
+.right-side{
+    background: purple;
+display: flex;
+margin: 1% 0 0 0;    
+flex-direction: row;
+width: 79%;
+
+
+}
+.manager-info{
+    height: 40vh;
+    width: 100%;
+    background: red;
+
+}
+.team-preview{
+    height: 40vh;
+    width: 100%;
+    background: yellow;
+    margin: 80px 0 0 0;
+}
+.tasks{
+    background: orange;
+    width: 32%;
+    
+    
+}
+.main-content{
+    background: blanchedalmond;
+    width: 68%;
+    
+}
