@@ -9,7 +9,9 @@ const cors = require("cors");
 const massive = require("massive");
 const path = require("path");
 
-// const poc = require(`${__dirname}/controllers/postCtrl`);
+const pc = require(`${__dirname}/controllers/projectCtrl`);
+const uc = require(`${__dirname}/controllers/userCtrl`);
+
 
 
 const port = 3001;
@@ -105,8 +107,11 @@ app.get("/logout", (req, res) => {
 
 
 //EndPoints
-//change user name
-// app.put("/api/changeName/:id", bc.changeName);
+
+//User Endpoints
+
+//Projects Endpoints
+app.get("/api/Projects/:id", pc.getProjects);
 
 app.listen(port, () => {
   console.log(`We Live Baby!! ${port}`);
