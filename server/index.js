@@ -90,11 +90,13 @@ app.get(
     failureRedirect: "http://localhost:3000/#/"
   }),
   (req, res) => {
+    console.log(req.user);    
     res.redirect(`http://localhost:3000/#/dashboard`);
   }
 );
 
 app.get("/api/me", (req, res) => {
+  console.log(req.user);
   if (req.user) res.status(200).json(req.user);
   else res.status(500).json({ message: "Please Login" });
 });

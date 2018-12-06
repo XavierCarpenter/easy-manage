@@ -9,7 +9,7 @@ export function getUser() {
     return {
         type: GET_USER,
         payload: axios
-            .request({ url: "/api/me" })
+            .request("/api/me")
             .then(response => response.data)
             .catch(err => err.message)
     };
@@ -21,7 +21,7 @@ const initialState = {
     user: {},
     isLoading: false,
     didErr: false,
-    errMessage: null,
+    errMessage: null
 };
 
 export default function reducer(state = initialState, action) {
