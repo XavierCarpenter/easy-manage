@@ -1,21 +1,42 @@
 .main-nav{
-    background: green;
+    background: #1B1937;
+    color: #fff;
+}
+.main-nav button{
+    border: solid 1px #fff;
+    color: #fff;
+    background: none;
+}
+.main-nav button:hover{
+    cursor: pointer;
+    color: #3981FF;
+    border: solid 1px #3981FF;
+}
+.nav-items li:hover{
+    color: #3981FF;
+    cursor: pointer;
 }
  .Dashboard-content{
-    background: blue;
+    background: #D8DAE7;
+    margin: 1.8% 1% 0 1%;
     display: flex;
 } 
+.company-name{
+    position: absolute;
+    margin: 5px 0 5px 1%;
+    color: #1B1937;
+    /* height: 25px; */
+    /* width: 200px; */
+}
 .left-side{
-background: grey;
 display: flex;
 flex-direction: column;
-margin: 2.5% 1% 0 1%;
-width: 29%;
+margin: 10px 10px 0 10px;
+width: 20%;
 }
 .right-side{
-    background: purple;
 display: flex;
-margin: 2.5% 0 0 0;    
+/* margin: 2.5% 0 0 0;     */
 flex-direction: row;
 width: 79%;
 
@@ -24,23 +45,28 @@ width: 79%;
 .manager-info{
     height: 40vh;
     width: 100%;
-    background: red;
+    /* background: #63D5C3; */
+    background: #3981FF;
+    
 
 }
 .team-preview{
     height: 40vh;
     width: 100%;
-    background: yellow;
+    background: #fff;
     margin: 80px 0 0 0;
 }
 .tasks{
-    background: orange;
+    background: #fff;
+    border: 3px solid #3981FF;
     width: 32%;
+    margin: 10px 0 0 10px;
     
     
 }
 .main-content{
-    background: blanchedalmond;
+    background: #fff;
     width: 68%;
+    margin: 10px 10px 0 0;
     
 }

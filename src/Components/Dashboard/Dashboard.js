@@ -23,9 +23,12 @@ class Dashboard extends Component {
                         <li>Team</li>
                         <li>Notes</li>
                     </ul>
+                    <a href={process.env.REACT_APP_LOGOUT}>
+                        <button>Logout</button>
+                    </a>
                 </nav>
+                    <h1 className="company-name">{this.props.user.company}</h1>
                 <div className="Dashboard-content">
-                        <h1>{this.props.user.company}</h1>
                     <div className="left-side">
                         <div className="manager-info">
                             <h1>My info</h1>
