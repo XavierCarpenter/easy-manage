@@ -1,30 +1,31 @@
 .main-nav{
-    background: #1B1937;
-    color: #fff;
+    background: #fff;
+    color: #687177;    
+
 }
 .main-nav button{
-    border: solid 1px #fff;
-    color: #fff;
+    border: solid 1px #B6C6CF;
+    color: #687177;    
     background: none;
 }
 .main-nav button:hover{
     cursor: pointer;
-    color: #3981FF;
-    border: solid 1px #3981FF;
+    color: #74D897;
+    border: solid 1px #74D897;
 }
 .nav-items li:hover{
-    color: #3981FF;
+    color: #74D897;
     cursor: pointer;
 }
  .Dashboard-content{
-    background: #D8DAE7;
-    margin: 1.8% 1% 0 1%;
+   background: #D1DBDE;
+    /* margin: 1.8% 1% 0 1%; */
     display: flex;
 } 
 .company-name{
     position: absolute;
     margin: 5px 0 5px 1%;
-    color: #1B1937;
+    color: #687177;    
     /* height: 25px; */
     /* width: 200px; */
 }
@@ -45,8 +46,12 @@ width: 79%;
 .manager-info{
     height: 40vh;
     width: 100%;
-    /* background: #63D5C3; */
-    background: #3981FF;
+    background: #fff;
+    /* border: solid 3px #74D897; */
+    color: #687177;    
+    -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
     
 
 }
@@ -54,19 +59,66 @@ width: 79%;
     height: 40vh;
     width: 100%;
     background: #fff;
+    color: #687177;        
+    /* border: solid 3px #74D897;     */
     margin: 80px 0 0 0;
+    -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
 }
 .tasks{
-    background: #fff;
-    border: 3px solid #3981FF;
+    background: rgb(144, 206, 166);
+    color: #687177;        
     width: 32%;
     margin: 10px 0 0 10px;
-    
-    
+    /* border: solid 3px #74D897; */
+       -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.task-filter{
+    display: flex;
+    justify-content: space-around;
+}
+.task{
+    text-align: left;
+    background: #fff;
+border: solid 1.5px #D1DBDE;    
+    color: #687177;      
+    margin: 10px 5px;  
+       -webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.task h3{
+    margin: 10px 5px;
+}
+.task button{
+    width: 50%;
+    height: 38px;
+    border: solid 1px #B6C6CF;
+    border-bottom: 1.5px;
+    background: none;
+    color: #687177;    
+    margin: 20px 0 0 0;
+            
+}
+#left-btn{
+    border-right: none;
+    border-left: none;
+}
+#right-btn{
+border-right: none;    
+}
+.task button:hover{
+    cursor: pointer;
+     color: #74D897;
+     background: rgb(116, 216, 151, .3);
+    /* border: solid 1px #74D897; */
 }
 .main-content{
-    background: #fff;
+   background: #D1DBDE;
     width: 68%;
     margin: 10px 10px 0 0;
-    
+    color: #687177;    
 }

@@ -113,7 +113,8 @@ app.get("/logout", (req, res) => {
 //User Endpoints
 
 //Projects Endpoints
-app.get("/api/Projects/:id", pc.getProjects);
+app.get("/api/projects/:id", pc.getProjects);
+app.get("/api/tasks/:id", pc.getTasks);
 
 app.listen(port, () => {
   console.log(`We Live Baby!! ${port}`);

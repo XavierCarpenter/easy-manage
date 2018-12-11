@@ -12,6 +12,9 @@ class Dashboard extends Component {
     }
     componentDidMount() {
         this.props.getUser();
+        axios.get(`/api/projects/${this.props.user.id}`).then(results => {
+            this.setState({ project: results.data });
+        });
     }
     render() {
         console.log(this.props.user)
@@ -27,8 +30,8 @@ class Dashboard extends Component {
                         <button>Logout</button>
                     </a>
                 </nav>
-                    <h1 className="company-name">{this.props.user.company}</h1>
                 <div className="Dashboard-content">
+                    <h1 className="company-name">{this.props.user.company}</h1>
                     <div className="left-side">
                         <div className="manager-info">
                             <h1>My info</h1>
@@ -40,7 +43,26 @@ class Dashboard extends Component {
                         </div>
                     </div>
                     <div className="right-side">
-                        <div className="tasks">Tasks</div>
+                        <div className="tasks">Tasks
+                        <div className="task-filter">
+                            <p>Project:</p>
+                            <p>Task:</p>
+                            </div>
+                            <ul>
+                                <li><div className="task">
+                                    <h3>Build database for app</h3>
+                                    <h3>Assigned:</h3>
+                                    <button id="left-btn">View Project</button>
+                                    <button id="right-btn">Complete Task</button>
+                                </div></li>
+                                <li><div className="task">
+                                    <h3>Build database for app</h3>
+                                    <h3>Assigned:</h3>
+                                    <button id="left-btn">View Project</button>
+                                    <button id="right-btn">Complete Task</button>
+                                </div></li>
+                            </ul>
+                        </div>
                         <div className="main-content">main-content</div>
 
                     </div>
