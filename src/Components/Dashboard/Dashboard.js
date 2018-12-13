@@ -2,22 +2,41 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { getUser } from "../../ducks/reducer";
 import { Link, withRouter } from "react-router-dom";
+import axios from "axios";
 import './Dashboard.css'
 
 
 class Dashboard extends Component {
     constructor(props) {
         super(props);
-        this.state = {}
+        this.state = {
+            project: "",
+            tasks: ""
+        }
     }
     componentDidMount() {
-        this.props.getUser();
-        axios.get(`/api/projects/${this.props.user.id}`).then(results => {
-            this.setState({ project: results.data });
-        });
+        this.props.getUser().then(() => {
+            axios.get(`/api/project/${this.props.user.id}`).then(results => {
+                this.setState({ project: results.data[0] })
+            }).then(() => {
+
+                axios.get(`/api/tasks/${this.state.project.id}`).then(results => {
+                    console.log(results.data)
+                    this.setState({ tasks: results.data })
+                })
+            })
+
+        })
     }
     render() {
-        console.log(this.props.user)
+        console.log(this.state.tasks)
+        // description: "Build a smoother website to sell Nike Products"
+        // end_date: null
+        // est_end_date: "12/31/2018"
+        // id: 1
+        // name: "Nike New Website"
+        // start_date: "11/26/2018"
+
         return (
             <div className="Home">
                 <nav className="main-nav">
@@ -45,8 +64,8 @@ class Dashboard extends Component {
                     <div className="right-side">
                         <div className="tasks">Tasks
                         <div className="task-filter">
-                            <p>Project:</p>
-                            <p>Task:</p>
+                                <p>Project:{this.state.project.name}</p>
+                                <p>Task:</p>
                             </div>
                             <ul>
                                 <li><div className="task">

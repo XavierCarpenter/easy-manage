@@ -1,24 +1,24 @@
 module.exports = {
     //get all Projects
-    getProjects: (req, res, next) => {
+    getProject: (req, res, next) => {
         const dbInstance = req.app.get("db");
         const { params } = req;
         
         dbInstance
-            .get_projects([params.id])
-            .then(projects => res.status(200).json(projects))
+            .get_project([params.id])
+            .then(project => res.status(200).json(project))
             .catch(() => res.status(500).json());
     },
-    // //get Specific Project
-    // getProject: (req, res, next) => {
-    //     const dbInstance = req.app.get("db");
-    //     const { params } = req;
+    //get tasks
+    getTasks: (req, res, next) => {
+        const dbInstance = req.app.get("db");
+        const { params } = req;
 
-    //     dbInstance
-    //         .get_business([params.id])
-    //         .then(project => res.status(200).json(project))
-    //         .catch(() => res.status(500).json());
-    // },
+        dbInstance
+            .get_tasks([params.id])
+            .then(tasks => res.status(200).json(tasks))
+            .catch(() => res.status(500).json());
+    },
     // //get the hours of operation
     // getHours: (req, res, next) => {
     //     const dbInstance = req.app.get("db");

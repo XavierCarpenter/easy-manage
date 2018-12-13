@@ -90,13 +90,11 @@ app.get(
     failureRedirect: "http://localhost:3000/#/"
   }),
   (req, res) => {
-    console.log(req.user);    
     res.redirect(`http://localhost:3000/#/dashboard`);
   }
 );
 
 app.get("/api/me", (req, res) => {
-  console.log(req.user);
   if (req.user) res.status(200).json(req.user);
   else res.status(500).json({ message: "Please Login" });
 });
@@ -113,7 +111,7 @@ app.get("/logout", (req, res) => {
 //User Endpoints
 
 //Projects Endpoints
-app.get("/api/projects/:id", pc.getProjects);
+app.get("/api/project/:id", pc.getProject);
 app.get("/api/tasks/:id", pc.getTasks);
 
 app.listen(port, () => {
