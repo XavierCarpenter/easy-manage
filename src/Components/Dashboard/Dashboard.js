@@ -30,12 +30,34 @@ class Dashboard extends Component {
     }
     render() {
         console.log(this.state.tasks)
-        // description: "Build a smoother website to sell Nike Products"
+        let tasks = this.state.tasks && this.state.tasks.map((obj, i) => {
+            return(
+                <div key={i} className="task">
+                    <h3>{obj.title}</h3>
+                    <h3>Assigned: {obj.name}</h3>
+                    <button id="left-btn">View Project</button>
+                    <button id="right-btn">Complete Task</button>
+                </div>
+            )
+        })
+        let main = this.state.tasks && this.state.tasks.map((obj, i) => {
+            return (
+                <div key={i}>
+                <p>Started: {obj.start_date}</p>
+                <p>Completed: {obj.end_date === null ? "" : obj.end_date}</p>
+                    <h1>{obj.title}</h1>
+                    <p>{obj.description}</p>
+                    
+                </div>
+            )
+        })
+        // description: "Setup a PostgreSQL database to store data for website"
         // end_date: null
-        // est_end_date: "12/31/2018"
         // id: 1
-        // name: "Nike New Website"
+        // name: "Xavier Carpenter"
+        // project_id: 1
         // start_date: "11/26/2018"
+        // title: "Setup Database for website"
 
         return (
             <div className="Home">
@@ -68,12 +90,7 @@ class Dashboard extends Component {
                                 <p>Task:</p>
                             </div>
                             <ul>
-                                <li><div className="task">
-                                    <h3>Build database for app</h3>
-                                    <h3>Assigned:</h3>
-                                    <button id="left-btn">View Project</button>
-                                    <button id="right-btn">Complete Task</button>
-                                </div></li>
+                                <li>{tasks}></li>
                                 <li><div className="task">
                                     <h3>Build database for app</h3>
                                     <h3>Assigned:</h3>
@@ -82,7 +99,9 @@ class Dashboard extends Component {
                                 </div></li>
                             </ul>
                         </div>
-                        <div className="main-content">main-content</div>
+                        <div className="main-content">main-content
+                        {main}
+                        </div>
 
                     </div>
                 </div>
